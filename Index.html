@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+</head>
+<body>
+
+<script>
+    
+var svg = d3.select("body").append("svg").attr({
+    width:600,
+    height: 1000
+    });
+
+    for(var i=0; i<20; i++){
+  var thisNum = random(20,300);
+  d3.select("svg")
+    .append("rect")
+    .attr({
+    x: 10,
+    y: 10+12*i,
+    width: thisNum,
+    height: 10,
+    fill: "red"
+  });
+  d3.select("svg")
+    .append("text")
+    .attr({
+    x: thisNum+15,
+    y: 20+12*i,
+    "font-size": 12
+  }).text(thisNum);
+}
+function random(n,m){
+  return Math.ceil(Math.random()*(m-n)+n);
+}    
+//        svg.append("rect")
+//    .attr({
+//    x: 10,
+//    y: 10+15*0,
+//    width: 20*1,
+//    height: 10,
+//    fill:"red"
+// });
+//    svg.append("rect")
+//    .attr({
+//    x: 10,
+//    y: 10+15*1,
+//    width: 20*2,
+//    height: 10,
+//    fill:"red"
+// });
+//        svg.append("rect")
+//    .attr({
+//    x: 10,
+//    y: 10+15*2,
+//    width: 20*3,
+//    height: 10,
+//    fill:"red"
+// });
+//        svg.append("rect")
+//    .attr({
+//    x: 10,
+//    y: 10+15*3,
+//    width: 20*4,
+//    height: 10,
+//    fill:"red"
+// })
+    
+</script>
+    
+    
+
+</body>
+</html>
